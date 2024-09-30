@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Поле ввода функции -->
+        <EditText
+            android:id="@+id/functionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите функцию f(x)" />
+
+        <!-- Поля ввода диапазона -->
+        <EditText
+            android:id="@+id/lowerBoundInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Нижняя граница диапазона"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <EditText
+            android:id="@+id/upperBoundInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Верхняя граница диапазона"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <!-- Выбор максимизации или минимизации -->
+        <RadioGroup
+            android:id="@+id/optimizationTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/minimizeOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Минимизировать" />
+
+            <RadioButton
+                android:id="@+id/maximizeOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Максимизировать" />
+        </RadioGroup>
+
+        <!-- Кнопка запуска оптимизации -->
+        <Button
+            android:id="@+id/optimizeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Оптимизировать" />
+
+        <!-- Поле для вывода результата -->
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Результат будет здесь"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/instructionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Инструкция" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
